@@ -1,0 +1,336 @@
+var {
+    --primary-color: #f0c14b;
+    --secondary-color: #0f1b26;
+    --tertiary-color: #154572;
+    --red-crimson: #140101;
+    --red-compliment: #530f0f;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background: linear-gradient(180deg, #09121b, #154572);
+    /* background: url(Images/Rock-vertical.jpg); */
+    background-size: cover;
+    color: #ead8d8;
+  }
+
+
+  /* NAVBAR */
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--tertiary-color);
+    backdrop-filter: blur(1px);
+    color: white;
+    position: fixed;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 50px;
+}
+
+  .title-head {
+    margin-left: 30px;
+    text-decoration: none;
+    
+  }
+
+  .title-head a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    
+  }
+
+  .menu ul {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+  }
+
+  .menu ul li {
+    margin: 0 15px;
+  }
+
+  .menu ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+
+  .menu ul li a:hover {
+    color: #87add1;
+  }
+
+
+  /* HEADER CONTENTS */
+
+  .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+    padding-right: 350px;
+    margin: 150px 0;
+    /* margin-bottom: 350px; */
+    margin-top: 200px; /* Add this line to push content below navbar */
+}
+
+  .header {
+    display: grid;
+  }
+
+  .header-intro {
+    display: block;
+    position: relative;
+    font-size: 60px;
+  }
+
+  .header-text {
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    padding: 20px 0px 50px 0px;
+    color: var(--primary-color);
+    margin-bottom: 80px;
+  }
+
+  .header-text:hover   {
+    color: aliceblue;
+  }
+
+
+  /* PROFILE IMAGE */
+
+  .profile-img {
+    display: flex;
+    width: 500px;
+    min-width: 500px;
+    height: 500px;
+    min-height: 500px;
+    object-fit: cover;
+    border: 5px solid #425669;
+    border-radius: 360px;
+    transition: all 0.9s ease-in-out;
+    box-shadow: 0 0 8px 2px rgba(255,255,255,0.18);
+    animation: glow-border 2s infinite alternate;
+}
+
+@keyframes glow-border {
+    0% {
+        box-shadow: 0 0 10px 4px rgba(255,255,255,0.18);
+        border-color: #425669;
+    }
+    100% {
+        box-shadow: 0 0 14px 4px rgba(255,255,255,0.22);
+        border-color: #5b7084;
+    }
+}
+
+.profile-img:hover {
+    border-radius: 100px;
+    width: 600px;
+    min-width: 500px;
+    height: 600px;
+    min-height: 500px;
+    animation: normal;
+  }
+
+
+/* CONTENT */
+
+ .content {
+    display: flex;
+    margin: auto;
+    gap: 50px;
+    padding: 70px;
+ }
+
+  .about {
+    padding: 15px 70px;
+    text-align: center;
+    /* background: url(Images/Portfolio-2.jpg); */
+    background: linear-gradient(90deg, black, rgb(47, 47, 54), black);
+    /* filter: brightness(0.8); */ /* Removed to allow 3D effect to be more visible */
+    /* filter: opacity(0.5); */ /* Removed to allow 3D effect to be more visible */
+    background-size: cover;
+    object-fit: cover;
+    backdrop-filter: blur(5px); /* Reduced blur for better text readability with 3D */
+    border: 2px solid rgb(18, 18, 18);
+    border-radius: 20px;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    margin-bottom: 100px;
+    transform-style: preserve-3d; 
+    perspective: 1000px;
+    transition: all 0.5s ease-out;
+    transform: rotateX(0deg) rotateY(0deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    overflow-y: auto;
+  }
+
+  .about:hover {
+    background: linear-gradient(90deg, black, rgb(29, 41, 78), black);
+    scale: 1.05;
+  }
+
+  .qualifications {
+    padding: 15px 70px;
+    text-align: center;
+    /* background: url(Images/Rock-horizontal.jpg); */
+    background: linear-gradient(90deg, black, rgb(47, 47, 54), black);
+    /* filter: opacity(0.5); */ /* Removed to allow 3D effect to be more visible */
+    background-size: cover;
+    object-fit: contain;
+    backdrop-filter: blur(5px); /* Reduced blur for better text readability with 3D */
+    border: 2px solid rgb(18, 18, 18);
+    border-radius: 20px;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    margin-bottom: 100px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: all 0.5s ease-out;
+    transform: rotateX(0deg) rotateY(0deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    overflow-y: auto;
+    padding-bottom: 30px;
+  }
+
+  .qualifications:hover {
+    background: linear-gradient(90deg, black, rgb(29, 41, 78), black);
+    scale: 1.05;
+  }
+
+
+
+
+/* FORM SECTION */
+
+  .form {
+    display: block;
+    /* background: linear-gradient(90deg, #03243f9c, #516d88, #03243f9c) ; */
+    backdrop-filter: blur(5px);
+    /* border: 2px solid rgb(109, 109, 109); */
+    border-radius: 20px;
+    max-width: 550px;
+    height: fit-content;
+    min-height: 600px;  
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 20px;
+    /* padding-top: 50px; */
+  }
+
+  .form-title {
+    text-align: center; 
+    margin-bottom: 50px;
+    color: aliceblue
+  }
+
+  label {
+    display: block;
+    padding: 0 5px;
+  }
+
+  .input-field {
+    width: 100%;
+    height: 45px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 7px;
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: #dfe4ea;
+    border: 2px solid grey;
+  }
+
+  textarea {
+    max-width: 100%;
+    min-width: 100%;
+    height: 200px;
+    min-height: 150px;
+    margin: auto;
+    padding: 7px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: #dfe4ea;  
+    border: 2px solid grey;
+    font-size: 15px;
+  }
+
+ 
+  .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6986a2;
+    width: 50%;
+    height: 38px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    border: 2px solid #5f788f;
+    border-radius: 5px;
+    font-size: 19px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .submit:hover {
+    background-color: #78a3cb;
+    border: 2px solid #78a3cb;
+    border-radius: 7px;
+    scale: 1.04;
+  }
+
+
+
+  /* Footer Styles */
+.footer {
+  background-color: #1a1a1a; /* Dark background for footer */
+  color: #f0f0f0; /* Light text color */
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #333; /* Subtle top border */
+  width: 100%; /* Ensure footer spans full width */
+}
+
+.contact-links {
+  display: flex;
+  gap: 20px; /* Space between social media icons */
+  align-items: center;
+}
+
+.contact-links a {
+  color: #f0f0f0; /* Icon color */
+  font-size: 24px; /* Icon size */
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: var(--primary-color); /* Highlight color on hover */
+}
+
+.footer-text p {
+  margin: 0;
+  font-size: 14px;
+}
